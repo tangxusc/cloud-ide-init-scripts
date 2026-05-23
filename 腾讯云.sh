@@ -46,3 +46,11 @@ EOF
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 sudo usermod -aG docker $USER
 newgrp docker
+
+vim ~/.ssh/config
+Host github.com
+    Hostname ssh.github.com
+    User git
+    Port 443
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
